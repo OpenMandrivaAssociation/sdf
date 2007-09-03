@@ -55,7 +55,7 @@ perl Makefile.PL
 
 %install
 rm -Rf %{buildroot}
-%makeinstall_std INSTALLSITELIB=%perl_vendorlib
+%makeinstall_std INSTALLDIRS=vendor
 
 %clean
 rm -Rf %{buildroot}
