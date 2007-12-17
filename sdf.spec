@@ -12,7 +12,6 @@ Summary:	Simple Document Format document development system
 Source:		%{name}-%{version}.tar.bz2
 URL:		http://search.cpan.org/~ianc/%{name}-%{version}/
 BuildRequires:	perl
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 Buildarch:	noarch
 
 %description
