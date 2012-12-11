@@ -12,8 +12,8 @@ Summary:	Simple Document Format document development system
 Source:		%{name}-%{version}.tar.bz2
 URL:		http://search.cpan.org/~ianc/%{name}-%{version}/
 BuildRequires:	perl
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
-Buildarch:	noarch
+BuildRequires:	perl-devel
+BuildArch:	noarch
 
 %description
 SDF (Simple Document Format) is a freely available document development
@@ -54,17 +54,39 @@ perl Makefile.PL
 %make
 
 %install
-rm -Rf %{buildroot}
 %makeinstall_std INSTALLDIRS=vendor
 
-%clean
-rm -Rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{_bindir}/*
 %{perl_vendorlib}/%{name}
 %{perl_vendorlib}/Pod/*.pm
 %{_mandir}/man?/*
 %doc LICENSE README PODNOTES
+
+
+
+%changelog
+* Tue Sep 08 2009 Thierry Vignaud <tv@mandriva.org> 2.001-4mdv2010.0
++ Revision: 433640
+- rebuild
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 2.001-3mdv2008.1
++ Revision: 140782
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Mon Sep 03 2007 Buchan Milne <bgmilne@mandriva.org> 2.001-3mdv2008.0
++ Revision: 78636
+- Force all installation dirs to vendor
+- Rebuild
+
+
+* Wed Dec 15 2004 Buchan Milne <bgmilne@linux-mandrake.com> 2.001-2mdk
+- rebuild for cooker
+- add distro-specific release tag
+
+* Sun Jun 13 2004 Buchan Milne <bgmilne@linux-mandrake.com> 2.001-1mdk
+- first Mandrake package
 
