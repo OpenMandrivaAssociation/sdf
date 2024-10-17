@@ -10,7 +10,7 @@ License:	BSD like
 Group:		Publishing
 Summary:	Simple Document Format document development system
 Source:		%{name}-%{version}.tar.bz2
-URL:		http://search.cpan.org/~ianc/%{name}-%{version}/
+URL:		https://search.cpan.org/~ianc/%{name}-%{version}/
 BuildRequires:	perl
 BuildRequires:	perl-devel
 BuildArch:	noarch
