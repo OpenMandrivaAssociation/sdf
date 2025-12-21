@@ -11,6 +11,7 @@ Group:		Publishing
 Summary:	Simple Document Format document development system
 Source:		%{name}-%{version}.tar.bz2
 URL:		https://search.cpan.org/~ianc/%{name}-%{version}/
+BuildRequires:	make
 BuildRequires:	perl
 BuildRequires:	perl-devel
 BuildArch:	noarch
