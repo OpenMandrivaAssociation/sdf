@@ -5,7 +5,7 @@
 
 Name:		sdf
 Version:	%{ver}
-Release:	%mkrel %rel
+Release:	%rel.1
 License:	BSD like
 Group:		Publishing
 Summary:	Simple Document Format document development system
